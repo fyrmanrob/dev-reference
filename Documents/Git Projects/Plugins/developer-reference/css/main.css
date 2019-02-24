@@ -1,0 +1,150 @@
+/********************************************************************************************************************************* 
+	CSS BEST PRACTICES
+		1. Box   		(display, width, height, padding, margin, box-shadow, float, position, left, top) 
+		2. Border   	(border, border-radius)
+		3. Background   
+		4. Text  		(font-size, font-weight, font-family, text-shadow, letter-spacing, text-transform) 
+		5. Other	
+		---------------------------------------------------------------------------------------------------------
+	SMACSS CATEGORIES	
+		1. Base Rules			(Define default styles. Applied to HTML elements, NOT CLASSES-ONLY OR IDs-ONLY)
+		2. Layout Rules     	(Divides page into major components: header, main, footer, sidebar, grid, etc.)
+		3. Module Rules     	(Exists to be stand-alone.  Only use Class names. Avoid IDs and HTML elements.)
+		3a. Subclassing Modules (If module needs modified for an situation, subclass it. Ex: '.mod' becomes '.mod-footer')
+		4. State Rules      	(Define how modules look when in a particular state like :hover, :active.  Can be used with JS)
+		5. Theme Rules          (Define color scheme and typography. Theme-specific styles)
+***********************************************************************************************************************************/
+
+/*  My comment that was added using Git */
+
+/**********************
+ 		Base Rules 
+ **********************/
+h1 {
+	font-family: 'Gloria Hallelujah', cursive;	
+	color: #000;
+	text-transform: uppercase;
+	text-shadow: 1.5px 1.5px 8px #fff;
+	text-align: center;
+}
+h2 {
+	font-family: 'Give You Glory', cursive;
+	color: #fff;
+	text-shadow: .5px .5px #000;
+}
+p {	
+	font-family: 'Handlee', cursive;
+	color: #000;
+	font-size: 16px !important;
+}
+
+#main a {
+	font-family: 'Exo', sans-serif;
+	font-size: 1.2em;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+	text-decoration: none;
+	line-height: 40px;
+}
+
+ul {
+	list-style: none !important;
+}
+
+/**********************
+ 	Layout Rules 
+ **********************/
+#page {
+	min-height: 800px;
+	padding: 40px;
+	background-image: linear-gradient(-225deg, #ff944d 0%, #ff6600 30%, #ff6600 45%, #ff944d 100%); 
+}
+
+.site {
+	max-width: none !important;
+}
+
+.site-header {
+	height: 100px;
+    width: 100%;
+    background-color: #222;
+    -webkit-clip-path: polygon(0px 100%,100% 65%,100% 0,0 0);
+}
+
+.site-title {
+	padding-left: 30px;
+	font-family: 'Trade Winds', cursive !important;
+	text-transform: none;
+	text-shadow: 8px 8px 20px #ff6600;
+	animation: rotateX(360deg) 1s;
+}
+	.site-title a {
+		color: #fff !important;
+	}
+
+.clip-path-box-shadow,
+.profile-pic {
+	filter: drop-shadow(10px 10px 15px rgba(0,0,0,1));
+}
+
+.profile-pic {
+	position: relative;
+	left: 45%;
+	margin-top: -10%;
+	border-radius: 50% !important;	
+	border: 6px solid #fff;
+	transition: transform 1s ease-in-out;
+/* 	transition-delay: 1.5s; */
+}
+
+.su-tabs-nav {
+	max-width: 150px;	
+}
+		.su-tabs-nav span.su-tabs-current {
+			color: darkorange;
+			font-weight: bold;
+			text-shadow: .5px .5px #000;
+		}
+
+/**********************
+ 	Module Rules 
+ **********************/
+.center-content {
+	float: left;
+	padding-left: 30%;
+}
+
+/**********************
+ 	State Rules 
+ **********************/
+ 
+
+ /**********************
+ 	Theme Rules 
+ **********************/
+
+
+ /**********************
+ 	Animations 
+ **********************/
+
+/* Animate Profile Pic - Slide in from left to right*/
+.animate-profile-pic-left-to-right {
+/*   animation: animation-img-left-to-right 1s ease-in-out; */
+} 
+
+/* Animate Profile Pic - Spin on Y axis */
+.profile-photo-container {
+	perspective: 200px;	
+}
+
+.profile-photo {
+	transition: transform;
+	transform-style: preserve-3d
+}
+
+.spinY {
+	transform: rotate(360deg);
+}
+
+

@@ -1,0 +1,13 @@
+.clip-path-box {
+	width: 100%;
+	height: 500px;
+	background-color: darkorange;
+	-webkit-clip-path: polygon(0px 90%,100% 65%,100% 0,0 0);
+}
+
+.clip-path-text {
+	position: relative;
+	top: 20%;
+	left: 20%;
+	font-weight: bold;
+}
