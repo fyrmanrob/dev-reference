@@ -7,7 +7,8 @@
  *	Version: 1.0
  *	Author: Rob McClara
  *	Author URI: http://fyrmanrob.net
- *
+ *	GitHub Plugin URI: fyrmanrob/dev-reference
+*	GitHub Plugin URI: https://github.com/fyrmanrob/dev-reference
 */
 
 
